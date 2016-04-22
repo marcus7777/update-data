@@ -25,7 +25,9 @@ Polymer({
     }
   },
   updateData: function () {
-    this.set("update", this.data)
+    if (JSON.stringify(this.update) !== JSON.stringify(this.updateData)) {
+      this.set("update", this.data)
+    }
   }
 })
 </script>
