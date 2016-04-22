@@ -17,13 +17,13 @@ Polymer({
     wait: {type:Number, value: 10},
     update: {
       notify: true
-    },
-    debounceMe: function () {
-      this.debounce("updateData", this.updateData, this.wait * 1000)
-    },
-    updateData: function () {
-      this.set("update", this.data)
     }
+  },
+  debounceMe: function () {
+    this.debounce("updateData", this.updateData, this.wait * 1000)
+  },
+  updateData: function () {
+    this.set("update", this.data)
   }
 })
 </script>
