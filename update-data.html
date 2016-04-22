@@ -14,13 +14,15 @@ Polymer({
   is: "update-data",
   properties: {
     data: {observer: "debounceMe"},
-    wait: {type:Number, value: 10},
+    wait: {type:Number, value: 5},
     update: {
       notify: true
     }
   },
   debounceMe: function () {
-    this.debounce("updateData", this.updateData, this.wait * 1000)
+    if (JSON.stringify(this.update) !== JSON.stringify(this.updateData)) {
+      this.debounce("updateData", this.updateData, this.wait * 1000)
+    }
   },
   updateData: function () {
     this.set("update", this.data)
