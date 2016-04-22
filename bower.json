@@ -1,0 +1,14 @@
+{
+  "name": "update-data",
+  "version": "1.0.0",
+  "description": "saves update data after a delay",
+  "main": "update-data.html",
+  "keywords": [
+    "polymer",
+    "web-components"
+  ],
+  "dependencies": {
+    "polymer": "*",
+    "icon-icons": "*"
+  }
+}
