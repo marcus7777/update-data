@@ -20,12 +20,12 @@ Polymer({
     }
   },
   debounceMe: function () {
-    if (JSON.stringify(this.update) !== JSON.stringify(this.updateData)) {
+    if (JSON.stringify(this.update) !== JSON.stringify(this.data)) {
       this.debounce("updateData", this.updateData, this.wait * 1000)
     }
   },
   updateData: function () {
-    if (JSON.stringify(this.update) !== JSON.stringify(this.updateData)) {
+    if (JSON.stringify(this.update) !== JSON.stringify(this.data)) {
       this.set("update", this.data)
     }
   }
